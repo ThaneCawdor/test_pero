@@ -1,9 +1,7 @@
 package com.example.demo.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
 import com.example.demo.core.BasePage;
-import org.openqa.selenium.interactions.Actions;
 
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.switchTo;
@@ -29,8 +27,7 @@ public class ProductPage extends BasePage {
 
     private final SelenideElement unauthorizedActionBox = $x("//div[@class='UnauthActionBox__header']");
     private final SelenideElement reportForm = $x("//div[@class='ReportForm__content']");
-
-    Actions actions = new Actions(WebDriverRunner.getWebDriver());
+    private final SelenideElement boxItem = $x("//div[@id='react_rootEcommMarketItemCard']");
 
 
     public LoginPage clickButtonToWrite() {
@@ -81,10 +78,12 @@ public class ProductPage extends BasePage {
     }
 
     public String checkErrorMessageComplain() {
-        actions.moveToElement(buttonMore).build().perform();
+        buttonMore.click();
         buttonComplain.click();
         return reportForm.getText();
     }
 
-
+    public SelenideElement getBoxItem() {
+        return boxItem;
+    }
 }

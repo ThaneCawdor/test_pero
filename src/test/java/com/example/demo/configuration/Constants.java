@@ -10,8 +10,6 @@ public class Constants {
     // browser constants
     public static final String CHROME = "chrome";
     public static final String FIREFOX = "firefox";
-    //public static final String BROWSER_SIZE = "1280x800";
-    public static final String BROWSER_SIZE = "--start-maximized";
 
     // driver constants
     public static final String ENABLE_AUTOMATION = "enable-automation";
@@ -28,10 +26,12 @@ public class Constants {
     public static final String INCOGNITO_MODE_ON = "--incognito";
     public static final String CHROME_DRIVER = "chrome";
     public static final String FIREFOX_DRIVER = "firefox";
-    public static final String DOWNLOAD_FOLDER = "src/test/resources";
 
     // messages
     public static final String MESSAGE_FOR_BUTTON_SHARE = "Зарегистрируйтесь, чтобы делиться интересными материалами";
     public static final String ERROR_MESSAGE_FOR_COMPLAIN = "Произошла ошибка. Попробуйте подать жалобу заново.";
+    public static final String MESSAGE_FOR_VOID_SEARCH = "По вашему запросу ничего не найдено.";
+    public static final String MESSAGE_FOR_VOID_SEARCH_VAR_2 = "На странице пока нет ни одной записи.";
+    public static final String COMMUNITY_CREATION_DATE = "28 марта 2024 года";
 
 }

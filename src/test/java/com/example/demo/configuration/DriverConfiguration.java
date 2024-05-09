@@ -10,10 +10,8 @@ import static com.example.demo.configuration.Constants.FIREFOX;
 public class DriverConfiguration {
 
     public static void setUpDriverConfiguration(String driverType) {
-        Configuration.browserSize = Constants.BROWSER_SIZE;
         Configuration.headless = Constants.HEADLESS_MODE;
         Configuration.timeout = Constants.TIMEOUT;
-        Configuration.downloadsFolder = Constants.DOWNLOAD_FOLDER;
 
         switch (driverType) {
             case CHROME -> {
